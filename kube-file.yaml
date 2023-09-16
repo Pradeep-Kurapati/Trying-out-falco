@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Cluster
+metadata:
+  name: my-cluster
+spec:
+  nodes:
+  - name: node1
+    spec:
+      machineType: n1-standard-1
+      disks:
+      - diskType: PERSISTENT
+        diskSizeGb: 1
+  - name: node2
+    spec:
+      machineType: n1-standard-1
+      disks:
+      - diskType: PERSISTENT
+        diskSizeGb: 1
+  ports:
+  - port: 8000
+  targetPort: 8000
